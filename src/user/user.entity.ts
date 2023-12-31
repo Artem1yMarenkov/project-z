@@ -5,15 +5,15 @@ export class User {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ type: 'string' })
+  @Column({ type: 'text' })
   login: string;
 
-  @Column({ type: 'string' })
+  @Column({ type: 'text' })
   password: string;
 
-  @Column({ type: 'string', unique: true })
+  @Column({ type: 'text', unique: true })
   email: string;
 
-  @Column({ default: true, type: 'boolean' })
+  @Column({ type: 'boolean', default: true })
   isActive: boolean;
 }

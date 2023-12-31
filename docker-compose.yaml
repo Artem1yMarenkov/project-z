@@ -1,17 +1,17 @@
-version: "3.9"
+version: '3.9'
 services:
   db:
     container_name: project-z_db
     image: postgres
     restart: always
     environment:
+      POSTGRES_USER: root
       POSTGRES_PASSWORD: FyONTK5IbKJP
-      POSTGRES_USERNAME: root
-      POSTGRES_DATABASE: project-z
+      POSTGRES_DB: project-z
   nodejs:
     container_name: project-z_nodejs
     build: .
     ports:
-      - "80:80"
+      - '80:80'
     volumes:
       - .:/usr/src/app

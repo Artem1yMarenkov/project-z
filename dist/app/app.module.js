@@ -8,13 +8,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
+const typeorm_1 = require("@nestjs/typeorm");
+const user_entity_1 = require("../user/user.entity");
 const user_module_1 = require("../user/user.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [user_module_1.UserModule],
+        imports: [
+            user_module_1.UserModule,
+            typeorm_1.TypeOrmModule.forRoot({
+                type: 'postgres',
+                host: 'project-z_db',
+                port: 5432,
+                username: 'root',
+                password: 'FyONTK5IbKJP',
+                database: 'project-z',
+                entities: [user_entity_1.User],
+                synchronize: true,
+            }),
+        ],
     })
 ], AppModule);
 //# sourceMappingURL=app.module.js.map

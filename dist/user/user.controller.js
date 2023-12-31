@@ -31,7 +31,7 @@ let UserController = class UserController {
         };
     }
     async register(user) {
-        this.userService.create(user);
+        return this.userService.create(user);
     }
     async update() { }
     async delete() { }

@@ -8,7 +8,7 @@ export declare class UserController {
     preRegister(data: PreRegisterDto): Promise<{
         code: string;
     }>;
-    register(user: UserCreateDto): Promise<void>;
+    register(user: UserCreateDto): Promise<import("./user.entity").User>;
     update(): Promise<void>;
     delete(): Promise<void>;
 }

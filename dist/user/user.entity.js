@@ -19,19 +19,19 @@ __decorate([
     __metadata("design:type", Number)
 ], User.prototype, "id", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ type: 'string' }),
+    (0, typeorm_1.Column)({ type: 'text' }),
     __metadata("design:type", String)
 ], User.prototype, "login", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ type: 'string' }),
+    (0, typeorm_1.Column)({ type: 'text' }),
     __metadata("design:type", String)
 ], User.prototype, "password", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ type: 'string', unique: true }),
+    (0, typeorm_1.Column)({ type: 'text', unique: true }),
     __metadata("design:type", String)
 ], User.prototype, "email", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ default: true, type: 'boolean' }),
+    (0, typeorm_1.Column)({ type: 'boolean', default: true }),
     __metadata("design:type", Boolean)
 ], User.prototype, "isActive", void 0);
 exports.User = User = __decorate([
